@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="9B081FFBA00859" tests="1" failures="1">
+    <testcase id="smartPin_delete_product" name="smartPin_delete_product">
+      <failure>Element not found: Id matching regex: com.myorder.pinbox.mpos.test:id/action_4</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

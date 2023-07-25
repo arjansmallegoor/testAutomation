@@ -1,0 +1,24 @@
+#BTW: Uitvoeren van Transactie met verschillende Producten met Korting
+
+appId: com.myorder.pinbox.mpos.test
+---
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/action_4"
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/action_add"
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/etxt_input"
+- inputText: "VAT Product"
+- "hideKeyboard"
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/etxt_currency_amount_internal"
+    index: 0
+- inputText: "3,00"
+- assertVisible: "€2,48"
+- "hideKeyboard"
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/etxt_currency_amount_internal"
+    index: 1
+- "eraseText"
+- inputText: "3,00"
+- assertVisible: "€3,63"

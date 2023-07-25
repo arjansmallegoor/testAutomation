@@ -1,0 +1,29 @@
+#Verwijderen van een bestaand Product
+
+appId: com.myorder.pinbox.mpos.test
+---
+
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/action_4
+- scrollUntilVisible:
+    element:
+      text: "New Product"
+    direction: DOWN
+- assertVisible: New Product
+- tapOn: New Product
+- scrollUntilVisible:
+    element:
+      id: "com.myorder.pinbox.mpos.test:id/button"
+    direction: DOWN
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/button"
+- tapOn:
+    id: android:id/button1
+- scrollUntilVisible:
+    element:
+      id: "com.myorder.pinbox.mpos.test:id/etxt_search"
+    direction: UP
+- tapOn:
+    id: "com.myorder.pinbox.mpos.test:id/etxt_search"
+- inputText: "New Product"
+- assertVisible: Your search returned no results

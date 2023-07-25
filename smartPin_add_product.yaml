@@ -1,0 +1,25 @@
+#Test voor SmartPin
+
+appId: com.myorder.pinbox.mpos.test
+---
+
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/action_4
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/action_add
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/etxt_input
+- inputText: "New Product"
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/etxt_currency_amount_internal
+- inputText: "12,12"
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/empty
+- tapOn:
+    id: com.myorder.pinbox.mpos.test:id/content
+    index: 2
+- scrollUntilVisible:
+    element:
+      text: "New Product"
+    direction: DOWN
+- assertVisible: New Product

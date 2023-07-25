@@ -1,0 +1,20 @@
+#Test voor SmartPin
+
+appId: com.myorder.pinbox.mpos.test
+---
+
+- launchApp
+- tapOn: "4"
+- tapOn: "6"
+- tapOn: "3"
+- tapOn: "4"
+- tapOn: "6"
+- scrollUntilVisible:
+    element:
+      text: "TP - Utrecht Android"
+    direction: DOWN
+- assertVisible: TP - Utrecht Android
+- tapOn: "TP - Utrecht Android"
+- assertVisible:
+    text: Products
+    index: 0

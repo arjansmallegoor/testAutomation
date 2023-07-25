@@ -1,0 +1,8 @@
+# SmartPin Test Job
+
+appId: com.myorder.pinbox.mpos.test
+---
+
+- runFlow: smartPin_login_basic.yaml
+- runFlow: smartPin_add_product.yaml
+- runFlow: smartPin_delete_product.yaml
